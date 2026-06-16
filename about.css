@@ -5,24 +5,24 @@
     padding-top: 60px; 
     padding-bottom: 2px;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
+    align-items: flex-start;
 }
 .profileid{ 
     position: relative;
     width: 200px;
     display: flex;
     justify-content: center;
-    padding: auto;
 }
 
-.infoam,.moreapag{
+.infoam,.moreabout{
     background-color: #ff94c280;
     padding: 50px;
     margin: 10px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1300px;
+    height: 1100px;
     width: 500px;
 }
 .proimg{

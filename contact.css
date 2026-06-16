@@ -37,10 +37,10 @@
  margin-right: 6px
 }
 
-.fa-user, fa-map-marker-alt, fa-envelope-open, fa-comment {
-font-size: 27px;
-
+.fa-user,.fa-map-marker-alt,.fa-envelope-open,.fa-comment {
+font-size: 15px;
 }
+
 .form-label {
 
 position: absolute;
@@ -144,6 +144,7 @@ top: -5px;
 left: -2px;
 
 font-size: 10px;
+color: rgb(255, 255, 255);
 }
 
 .textarea:focus + .form-label {
@@ -153,7 +154,18 @@ top: -5px;
 left: -2px;
 
 font-size: 10px;
+color: rgb(255, 255, 255);
 
+}
+
+.input-container:focus-within .fa-user,
+.input-container:focus-within .fa-map-marker-alt,
+.input-container:focus-within .fa-envelope-open {
+  color: rgb(255, 255, 255);
+}
+
+.textarea-container:focus-within .fa-comment {
+  color: rgb(255, 255, 255);
 }
 
 .input-item:not(:placeholder-shown).input-item:not(:focus) + .form-label {
@@ -164,7 +176,15 @@ left: -2px;
 
 font-size: 10px;
 
-color: rgb(138, 130, 130);
+color: rgb(157, 0, 255);
+}
+.input-container:has(.input-item:not(:placeholder-shown):not(:focus)) .fa-user,
+.input-container:has(.input-item:not(:placeholder-shown):not(:focus)) .fa-map-marker-alt,
+.input-container:has(.input-item:not(:placeholder-shown):not(:focus)) .fa-envelope-open,.textarea-container:has(.textarea:not(:placeholder-shown):not(:focus)) .fa-comment{
+    color:  rgb(157, 0, 255);
+}
+.input-item:not(:placeholder-shown):not(:focus){
+    color:   rgb(157, 0, 255);
 }
 
 .modal-container {
@@ -206,7 +226,9 @@ font-size: 30px;
 .modal p {
 margin: 20px 0;
 padding: 0;
-font-size: 15px;
+font-size: 40px;
+font-family: "Flavors", cursive;
+color: rgba(7, 100, 21, 0.974);
 }
 
 .modal img {
@@ -214,4 +236,9 @@ display: block;
 margin: 0 auto 0 auto;
 padding: 0;
 width: 300px;
+}
+
+.submit:hover{
+    background-color:  rgb(157, 0, 255);
+    transform: scale(1.1);
 }
