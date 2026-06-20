@@ -51,3 +51,108 @@
     color: rgb(28, 12, 72);
     background-color: #fbcfe882;
 }
+.sosmed{
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin-top: 80px;
+    background-color: rgb(240, 116, 155);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 60px;
+}
+ .o{
+    color: rgb(255, 227, 254);
+    cursor: pointer;
+}
+.o:hover{
+    color: aquamarine;
+}
+.moreapg{
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.i,.j{
+    justify-content: center;
+    display: flex;
+    color: rgb(93, 13, 127);
+}
+
+@media (max-width: 768px) {
+  /* Ubah layout dari samping (row) menjadi bertumpuk ke bawah (column) */
+  .about-main {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  /* Buat kotak infoam dan moreabout menyesuaikan lebar tablet */
+  .infoam, .moreabout {
+    width: 80%;
+    max-width: 480px;
+    height: auto; /* Hapus tinggi kaku 1100px agar tinggi kotak mengikuti isi teks */
+    padding: 35px 20px;
+    margin: 20px 0; /* Beri jarak vertikal antar kotak */
+  }
+
+  /* Sesuaikan sosmed agar tidak terlalu meluber */
+  .sosmed {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 40px;
+  }
+  iframe {
+  max-width: 100%;  
+  width: 400px;    
+  height: 225px;    
+}
+}
+@media (max-width: 480px) {
+  .about-main {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  /*  SINKRONISASI KOTAK BESAR VERSI MINI */
+  .infoam, .moreabout {
+    width: 90%;        
+    height: auto;      
+    padding: 30px 15px;
+    margin: 15px 0;
+  }
+
+  /*  SKALA ELEMEN PROFIL (Foto & Nama) */
+  .profileid, .moreapg {
+    width: 150px;      /* Perkecil container foto */
+  }
+
+  .proimg {
+    width: 150px;      /* Perkecil ukuran foto profil (dari 200px) */
+  }
+
+  .maname {
+    font-size: 22px;   /* Perkecil ukuran font nama (dari 30px) */
+    top: 135px;        /* Sesuaikan posisi vertikal karena fotonya mengecil */
+  }
+
+  /*  SKALA BIODATA DAN TEKS */
+  .bioam {
+    font-size: 14px;   /* Perkecil teks isi bio (dari 17px) */
+    margin: 20px 10px 10px 10px;
+    padding-top: 15px;
+  }
+
+  /*  SOSMED VERSI MINI MOBILE */
+  .sosmed {
+    font-size: 18px;   /* Perkecil ukuran teks/icon sosmed (dari 25px) */
+    margin-top: 35px;
+    padding: 20px 40px;/* Perkecil padding agar pas di ruang jempol HP */
+    border-radius: 30px;/* Sesuaikan radius lengkungannya */
+    text-align: center;
+  }
+}

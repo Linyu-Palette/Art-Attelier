@@ -29,7 +29,6 @@ position: absolute;
 right: 0;
 margin: 14px 30px 0px;
 }
-
 a {
 color: rgb(248, 233, 255);
 text-decoration: none;
@@ -37,13 +36,13 @@ padding: 18px;
 font-weight: bold;
 transition: all 0.5s ease;
 }
-a:hover{
+.maina:hover{
     background-color:rgb(248, 233, 255);
     color:  rgb(52, 4, 48);
     padding-bottom: 50px;
     outline: 1px solid rgba(107, 86, 116, 0.768);
 }
-a.active{
+.maina.active{
     background-color:rgb(248, 233, 255);
     color:  rgb(52, 4, 48);
     outline: 1px solid rgba(107, 86, 116, 0.768);
@@ -126,4 +125,147 @@ margin-right: 20px;
 
 .main-header.nav-hidden {
   transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+  
+  /* 1. HEADER STRUCTURAL REALIGNMENT */
+  .main-header {
+    height: auto;
+    padding: 12px 15px;
+    
+    display: grid;
+    grid-template-columns: auto 1fr; /* Kolom 1 pas seukuran ikon, Kolom 2 sisa layarnya */
+    align-items: center;             /* Menjajarkan ikon dan judul rata tengah secara vertikal */
+    justify-content: center;
+  }
+
+  .header-icon, .title {
+    position: static; 
+    display: inline-block;
+  }
+
+  .header-icon {
+    position: static;
+    grid-column: 1;
+    grid-row: 1;
+    width: 35px;
+    margin: 0 10px 0 0; /* Jarak kanan antara ikon ke judul */
+    justify-self: end;
+  }
+
+  .title {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+    justify-self: start; /* Dekatkan judul ke ikon */
+    transform: translateY(-2px); /* Menaikkan judul sedikit sesuai seleramu */
+  }
+
+  /* BOTTOM ROW: Align navigation links horizontally */
+  nav {
+    position: static;
+    grid-column: 1 / span 2; /* Paksa nav memotong dari kolom 1 sampai kolom 2 */
+    grid-row: 2;             /* Turunkan nav ke baris kedua */
+    
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  a {
+    padding: 8px 12px; 
+    font-size: 10px;
+  }
+
+  .maina:hover {
+    padding-bottom: 4px; 
+  }
+  .maina.active {
+    transform: translateY(2px); 
+  }
+
+  /* 2. 🚀 FOOTER DOWNSCALING (Hanya Dikecilkan) */
+  .corpcw, .corpew {
+    font-size: 32px; /* Diperkecil dari 50px */
+  }
+
+  .qif {
+    font-size: 22px; /* Diperkecil dari 30px */
+  }
+
+  .Logo-icon {
+    width: 45px; /* Diperkecil dari 70px */
+    margin: 5px 10px;
+  }
+
+  .info-center {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+}
+
+/* Extra Small Mobile Breakpoint (Phones under 480px width) */
+@media (max-width: 480px) {
+  .main-header {
+    height: auto; 
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 2. FORCE IKON: Jadikan inline-block agar mau berbaris ke samping */
+  .header-icon {
+    display: none;
+  }
+
+  /* 3. FORCE JUDUL: Jadikan inline-block agar mau berdampingan dengan ikon */
+  .title {
+    position: static;       /* Mencabut absolute desktop */
+    display: inline-block;  /* Mengizinkan ikon berada di sebelahnya */
+    vertical-align: middle; /* Sejajar lurus secara vertikal */
+    font-size: 18px; 
+    margin: 0;
+    text-align: left;
+    transform: translateY(-1px); /* Menaikkan judul sedikit */
+  }
+
+  /* 4. Perbaikan NAV agar konsisten berada di bawah baris judul */
+  nav {
+    position: static; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px; 
+  }
+
+  nav a {
+    font-size: 11px;
+    padding: 4px 6px; 
+  }
+
+  /* 🚀 Footer Untuk HP Yang Lebih Kecil (Tetap Sesuai Keinginanmu) */
+  .corpcw, .corpew {
+    font-size: 20px;
+  }
+  
+  .qif {
+    font-size: 14px;
+  }
+  
+  .Logo-icon {
+    width: 30px;
+    margin: 4px 6px;
+  }
+
+  .info-center {
+    font-size: 9px;
+  }
 }

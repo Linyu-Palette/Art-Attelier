@@ -6,8 +6,10 @@ const prevBtn = document.getElementById('prevBtn');
 const totalCards = cards.length;
 const angleStep = 360 / totalCards; // 40 degrees of separation for 9 cards
 let currentRotation = 0; 
+let isAutoplayPaused = false;
+const autoplaySpeed = 0.05;
 
-// 🚀 THE RADIUS CONTROL
+//  THE RADIUS CONTROL
 // Distance from the center point of the 3D ring out to the cards.
 // Increase this number if you want larger gaps between your cards!
 const radius = 270; 
@@ -141,6 +143,10 @@ stage.addEventListener('touchstart', startDrag, { passive: false });
 stage.addEventListener('touchmove', dragging, { passive: false });
 window.addEventListener('touchend', endDrag);
 
+
+
 // Build and lock layout ring geometry map
 setup3DCylinder();
+
+
 

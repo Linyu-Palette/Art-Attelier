@@ -5,3 +5,352 @@
     padding-bottom: 2px;
     min-height: 1000px;
 }
+.section-slider{
+  background-image: linear-gradient(
+      rgba(5, 15, 62, 0.4), rgba(49, 85, 111, 0.4)
+    ), 
+    url("Assets/slider wp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 4px solid rgba(87, 2, 108, 0.763);
+  
+}
+.image-slider {
+position: relative;
+width: 580px;
+height: 280px;
+margin: 0 auto;
+border-radius: 15px;
+overflow: hidden;
+top: 20px;
+cursor: grab;
+user-select: none;
+}
+.slider-track {
+  display: flex; /* Lines up all your slides perfectly side-by-side */
+  width: 100%;
+  height: 100%;
+  /* High-end cinematic easing curve */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+.slide {
+width: 100%;
+height: 100%;
+position: relative;
+flex: 0 0 100%;
+opacity: 0;
+transform: translateX(-50px);
+transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+pointer-events: none;
+}
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+pointer-events: none; 
+  -webkit-user-drag: none;
+}
+.slide-text {
+position: absolute;
+bottom: 45px;
+left: 20px;
+background-color: rgba(220, 220, 220, 0.609);
+padding: 15px;
+border-radius: 10px;
+}
+.slide-text h2 {
+font-size: 20px;
+padding: 0;
+margin: 0;
+}
+.slide-text p {
+font-size: 12px;
+padding: 0;
+margin: 0;
+}
+.navigation {
+position: absolute;
+display: flex;
+bottom: 2px;
+left: 50%;
+transform: translateX(-60%);
+z-index: 10;
+}
+.slider-btn {
+background-color: rgba(77, 20, 74, 0.315);
+width: 25px;
+height: 6px;
+border-radius: 3px;
+cursor: pointer;
+margin: 0 4px;
+transition: background-color 0.3s, width 0.3s;
+}
+.active {
+opacity: 1;
+}
+
+.slide {
+    /* add the code below*/
+    clip-path: circle (0% at 0 50%)
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.slider-btn.active {
+    background-color: rgb(77, 20, 74);
+}
+.slide.exit {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* top of the section */
+.p{
+  font-family:  "Agbalumo", system-ui;
+  color: rgb(48, 86, 48);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom,rgb(253, 195, 255) 45%,rgb(247, 183, 233)55%);
+  margin-top: -55px;
+}
+
+.v{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.t{
+  font-size: 20px;
+  color: rgb(5, 49, 3);
+  cursor: pointer;
+  padding: 3px;
+}
+.t:hover{
+ padding: 3px;
+ background-color: azure;
+ border-radius: 100px;
+ color: blue;
+ cursor: pointer;
+}
+
+.elegant{
+  padding: 15px;
+  background-color: rgba(255, 235, 205, 0.623);
+  margin: 15px;
+}
+
+.te{
+  margin: 0;
+  font-size: 25px;
+  color: goldenrod;
+}
+
+.c{
+  display: flex;
+ flex-wrap: wrap;
+ margin-top: 20px;
+ justify-content: center;
+}
+.cic{
+  padding: 20px;
+ background-color: rgba(0, 0, 0, 0.405);
+ box-shadow: 0 0 3px rgb(195, 196, 197);
+ border-radius: 5px;
+ margin: 10px;
+ width: 150px;
+ height: 250px;
+}
+.cic img{
+  width: 148px;
+  height: 248px;
+}
+
+.Casual{
+  padding: 15px;
+  background-color: rgba(181, 230, 244, 0.623);
+  margin: 15px;
+}
+
+.tcs{
+  margin: 0;
+  font-size: 25px;
+  color: rgb(255, 123, 165);
+}
+
+.Cool{
+  padding: 15px;
+  background-color: rgba(99, 2, 2, 0.623);
+  margin: 15px;
+}
+
+.tcl{
+  margin: 0;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.Gyaru{
+  padding: 15px;
+  background-color: rgba(255, 0, 212, 0.623);
+  margin: 15px;
+}
+.tgyar{
+  margin: 0;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.Coquette{
+  padding: 15px;
+  background-color: rgba(255, 193, 245, 0.623);
+  margin: 15px;
+}
+
+.tct{
+  margin: 0;
+  font-size: 25px;
+  color: rgb(255, 57, 219);
+}
+
+.Gothic{
+  padding: 15px;
+  background-color: rgba(27, 2, 45, 0.623);
+  margin: 15px;
+}
+
+.tg{
+  margin: 0;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.p2{
+  font-family:  "Agbalumo", system-ui;
+  color: rgb(48, 86, 48);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom,rgb(253, 195, 255) 45%,rgb(247, 183, 233)55%);
+}
+
+@media  (max-width: 768px) {
+  .section-slider {
+    height: 300px; 
+    padding-top: 25px;
+  }
+
+  .image-slider {
+    width: 90%;    
+    height: 240px;
+  }
+
+  .slide-text {
+    bottom: 30px;
+    padding: 10px;
+  }
+
+  .slide-text h2 {
+    font-size: 18px;
+  }
+
+
+  .c {
+    justify-content: space-around;
+  }
+
+  .cic {
+    width: 140px;  
+    height: 230px;
+    padding: 15px;
+  }
+
+  .cic img {
+    width: 100%;  
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media  (max-width: 480px) {
+  .popular {
+    padding-top: 40px;
+  }
+
+ 
+  .p, .p2 {
+    font-size: 16px;  
+    padding: 15px;
+  }
+
+ 
+  .section-slider {
+    height: 220px;
+  }
+
+  .image-slider {
+    width: 95%;       
+    height: 180px;
+    top: 10px;
+  }
+
+  .slide-text {
+    bottom: 15px;
+    left: 10px;
+    padding: 8px;
+  }
+
+  .slide-text h2 {
+    font-size: 14px;
+  }
+
+  .slide-text p {
+    font-size: 10px;
+  }
+
+  .slider-btn {
+    width: 15px;      
+    height: 4px;
+  }
+
+ 
+  .elegant, .Casual, .Cool, .Gyaru, .Coquette, .Gothic {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .te, .tcs, .tcl, .tgyar, .tct, .tg {
+    font-size: 18px;  
+  }
+
+  .t {
+    font-size: 14px;   
+  }
+
+  
+  .cic {
+    width: 42%;       
+    height: 200px;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .cic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
