@@ -42,7 +42,7 @@ transition: all 0.5s ease;
     padding-bottom: 50px;
     outline: 1px solid rgba(107, 86, 116, 0.768);
 }
-.maina.active{
+.active{
     background-color:rgb(248, 233, 255);
     color:  rgb(52, 4, 48);
     outline: 1px solid rgba(107, 86, 116, 0.768);
@@ -185,7 +185,7 @@ margin-right: 20px;
   .maina:hover {
     padding-bottom: 4px; 
   }
-  .maina.active {
+  .active {
     transform: translateY(2px); 
   }
 
@@ -268,4 +268,55 @@ margin-right: 20px;
   .info-center {
     font-size: 9px;
   }
+}
+
+
+
+
+.coming-soon{
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+
+.y{
+  width: 1000px;
+}
+.x{
+ display: flex;
+ justify-content: space-around;
+ max-resolution: 10px;
+}
+.xi{
+   background-image: linear-gradient(rgb(4, 0, 255),rgb(174, 0, 255));
+   font-size: 30px;
+   padding: 25px 600px;
+   font-style: bold;
+   color: azure;
+}
+@media (max-width: 1024px) {
+  .y {
+    width: 90%; 
+  }
+
+  .xi {
+    padding: 25px 50px; 
+    font-size: 26px; 
+}
+}
+@media (max-width: 768px) {
+  .x {
+    flex-direction: column; 
+    gap: 20px; 
+    padding-top: 100px;
+  }
+
+  .xi {
+    padding: 20px 20px; 
+    font-size: 22px;    
+    text-align: center;
+    display: block;     
+    width: 100%;        
+    box-sizing: border-box; 
+}
 }
